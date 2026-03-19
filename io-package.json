@@ -1,0 +1,68 @@
+{
+  "common": {
+    "name": "luxtronik2ws",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "Initial release - WebSocket support for Luxtronik v3.81+",
+        "de": "Erstveröffentlichung - WebSocket Unterstützung für Luxtronik v3.81+"
+      }
+    },
+    "title": "Luxtronik 2.1 WebSocket",
+    "titleLang": {
+      "en": "Luxtronik 2.1 WebSocket Adapter",
+      "de": "Luxtronik 2.1 WebSocket Adapter"
+    },
+    "desc": {
+      "en": "Connects to Alpha Innotec / Luxtronik 2.1 heat pumps via WebSocket (Firmware >= v3.81)",
+      "de": "Verbindet sich mit Alpha Innotec / Luxtronik 2.1 Wärmepumpen via WebSocket (Firmware >= v3.81)"
+    },
+    "authors": ["Community"],
+    "keywords": ["luxtronik", "alpha innotec", "wärmepumpe", "heatpump"],
+    "license": "MIT",
+    "type": "climate-control",
+    "icon": "admin/luxtronik.png",
+    "enabled": true,
+    "readme": "https://github.com/community/ioBroker.luxtronik2ws/blob/main/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "platform": "Javascript/Node.js",
+    "adminUI": {
+      "config": "json"
+    },
+    "connectionType": "local",
+    "dataSource": "push",
+    "tier": 2
+  },
+  "native": {
+    "host": "192.168.1.67",
+    "port": 8214,
+    "password": "999999",
+    "pollInterval": 30,
+    "reconnectInterval": 60
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "name": "Verbindungsstatus",
+        "type": "boolean",
+        "role": "indicator.connected",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}

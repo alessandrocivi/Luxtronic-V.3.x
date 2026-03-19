@@ -2,9 +2,9 @@
 
 ## Alpha Innotec / Luxtronik 2.1 WebSocket Adapter
 
-[![GitHub](https://img.shields.io/badge/GitHub-civiale/Luxtronic--V.3.x-blue)](https://github.com/civiale/Luxtronic-V.3.x)
+[![GitHub](https://img.shields.io/badge/GitHub-alessandrocivi/Luxtronic--V.3.x-blue)](https://github.com/alessandrocivi/Luxtronic-V.3.x)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Firmware](https://img.shields.io/badge/Firmware-v3.81%2B-green)](https://github.com/civiale/Luxtronic-V.3.x)
+[![Firmware](https://img.shields.io/badge/Firmware-v3.81%2B-green)](https://github.com/alessandrocivi/Luxtronic-V.3.x)
 [![ioBroker](https://img.shields.io/badge/ioBroker-Adapter-orange)](https://www.iobroker.net)
 
 ---
@@ -240,7 +240,7 @@ Dieses Test-Tool wurde entwickelt um das neue `Lux_WS` WebSocket-Protokoll zu an
 2. Klick auf das **GitHub-Symbol** (Eigene URL)
 3. URL eingeben:
    ```
-   https://github.com/civiale/Luxtronic-V.3.x
+   https://github.com/alessandrocivi/Luxtronic-V.3.x
    ```
 4. **Installieren** klicken
 5. Instanz anlegen und konfigurieren

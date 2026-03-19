@@ -17,13 +17,13 @@
       "en": "Connects to Alpha Innotec / Luxtronik 2.1 heat pumps via WebSocket (Firmware >= v3.81)",
       "de": "Verbindet sich mit Alpha Innotec / Luxtronik 2.1 Wärmepumpen via WebSocket (Firmware >= v3.81)"
     },
-    "authors": ["Community"],
+    "authors": ["alessandrocivi"],
     "keywords": ["luxtronik", "alpha innotec", "wärmepumpe", "heatpump"],
     "license": "MIT",
     "type": "climate-control",
     "icon": "admin/luxtronik.png",
     "enabled": true,
-    "readme": "https://github.com/community/ioBroker.luxtronik2ws/blob/main/README.md",
+    "readme": "https://github.com/civiale/iobroker.luxtronik2ws/blob/main/README.md",
     "loglevel": "info",
     "mode": "daemon",
     "platform": "Javascript/Node.js",
@@ -35,7 +35,7 @@
     "tier": 2
   },
   "native": {
-    "host": "192.168.1.67",
+    "host": "",
     "port": 8214,
     "password": "999999",
     "pollInterval": 30,

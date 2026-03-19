@@ -4,7 +4,7 @@
   "description": "ioBroker Adapter für Alpha Innotec / Luxtronik 2.1 Wärmepumpen (Firmware >= v3.81) via WebSocket",
   "author": {
     "name": "alessandrocivi",
-    "url": "https://github.com/alessandrocivi"
+    "url": "https://github.com/civiale"
   },
   "license": "MIT",
   "main": "main.js",
@@ -16,13 +16,13 @@
     "heatpump",
     "websocket"
   ],
-  "homepage": "https://github.com/alessandrocivi/Luxtronic-V.3.x",
+  "homepage": "https://github.com/civiale/iobroker.luxtronik2ws",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alessandrocivi/Luxtronic-V.3.x.git"
+    "url": "https://github.com/civiale/iobroker.luxtronik2ws.git"
   },
   "bugs": {
-    "url": "https://github.com/alessandrocivi/Luxtronic-V.3.x/issues"
+    "url": "https://github.com/civiale/iobroker.luxtronik2ws/issues"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^3.0.0",

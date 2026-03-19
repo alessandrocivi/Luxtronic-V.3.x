@@ -82,7 +82,8 @@ class Luxtronik2WS extends utils.Adapter {
         if (!this.config.loxoneEnabled || !mqttClient || !mqttClient.connected) return;
         const prefix = this.config.loxoneMqttTopic || 'waermepumpe';
         const topic = `${prefix}/${this.buildStateId(section, name)}`;
-        const payload = unit ? `${value} ${unit}` : String(value);
+        // Loxone braucht reinen Zahlenwert — OHNE Einheit!
+        const payload = String(value);
         mqttClient.publish(topic, payload, { retain: true });
     }
 
@@ -236,10 +237,14 @@ class Luxtronik2WS extends utils.Adapter {
 
     parseValue(raw) {
         if (typeof raw === 'number' || typeof raw === 'boolean') return raw;
-        const num = parseFloat(raw);
-        if (!isNaN(num) && String(num) === String(raw)) return num;
-        if (raw === 'true') return true;
-        if (raw === 'false') return false;
+        if (typeof raw === 'string') {
+            // Einheit entfernen falls vorhanden z.B. "52.2°C" → 52.2
+            const stripped = raw.replace(/[°%a-zA-ZÄäÖöÜü\/]+$/, '').replace(',', '.').trim();
+            const num = parseFloat(stripped);
+            if (!isNaN(num)) return num;
+            if (raw === 'true') return true;
+            if (raw === 'false') return false;
+        }
         return raw;
     }
 
